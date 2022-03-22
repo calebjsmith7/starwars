@@ -1,10 +1,11 @@
 import React from 'react';
 import Logo from '../images/swlogo.png';
 
-function Profile() {
+function Profile(props) {
   return (
-    <>
-        <h4>Profile</h4>
+    <>  
+        <h2>Profile Page</h2>
+        <h4>{props.person.name}</h4>
     </>
   );
 }

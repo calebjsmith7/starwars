@@ -1,5 +1,6 @@
 import './App.css';
 import React from 'react';
+import { Routes, Route} from "react-router-dom";
 import Home from './components/Home';
 import Profile from './components/Profile';
 import StarwarsDataService from './services/StarwarsDataService';
@@ -26,7 +27,13 @@ function App() {
       {loading ?
         <h3 style={{ color: 'white', marginTop: '0%', paddingTop: '25%', fontSize: 30 }}>Loading...</h3>
         :
-        <Home characters={people}/>
+        <Routes>
+          <Route path="/" element={<Home characters={people}/>}/>
+          {people.map((person)=>{
+            <Route path={"/profile/"+ person.name} element={<Profile character={person}/>}/>
+          })}
+        </Routes>
+        
         }
 
     </div>

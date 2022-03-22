@@ -10,7 +10,7 @@ function Home(props) {
     <div className='homeHeaderMain'>
         <Header/>
           <Search search={searchValue} setSearch={setSearchValue} />
-          <div style={{ display: searchValue ? 'block' : 'none', backgroundColor: 'white', width: '50%', marginLeft: 'auto', marginRight: 'auto', marginTop: '-2%' }}>
+          <div style={{ display: searchValue ? 'block' : 'none', backgroundColor: 'white', width: '50%', marginLeft: 'auto', marginRight: 'auto', marginTop: '-2%', height: 'auto', maxHeight: 300, overflowY: 'scroll' }}>
               {characters.map((char) => {
                   let charName = char.name.toUpperCase();
                   return (
