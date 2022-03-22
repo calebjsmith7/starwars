@@ -9,7 +9,8 @@ function Search(props) {
         value={props.search}
         onChange={props.setSearch}
         onRequestSearch={()=>console.log('searching' + props.search)}
-        style={{width: '50%', marginLeft: 'auto', marginRight: 'auto', marginTop: '1%'}}
+        onCancelSearch={()=>{props.setSearch("")}}
+        style={{width: props.width, marginLeft: 'auto', marginRight: 'auto', marginTop: '1%'}}
     />
     </>
   );

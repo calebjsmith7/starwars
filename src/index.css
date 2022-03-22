@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+@font-face {
+  font-family: 'Aurek-Besh';
+  src: local('Aurek-Besh'), url(./fonts/Aurek-Besh.ttf) format('truetype');
+}

@@ -9,9 +9,9 @@ function Home(props) {
 
   return (
     <div className='homeHeaderMain'>
-      <Header/>
-      <Search search={searchValue} setSearch={setSearchValue} />
-      <SearchResults characterList={characters} searchEntry={searchValue} />
+      <Header width={255}/>
+      <Search search={searchValue} setSearch={setSearchValue} width="50%"/>
+      <SearchResults characterList={characters} searchEntry={searchValue} width="50%"/>
     </div>
   );
 }

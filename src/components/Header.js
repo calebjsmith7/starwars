@@ -1,10 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import Logo from '../images/swlogo.png';
 
-function Header() {
+function Header(props) {
   return (
     <>
-        <img src={Logo} style={{width: 255, height: 'auto'}}/>
+      <Link to="/">
+        <img src={Logo} style={{ width: props.width, height: 'auto' }} />
+      </Link>
     </>
   );
 }

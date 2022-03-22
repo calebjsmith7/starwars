@@ -1,9 +1,22 @@
 .App {
   text-align: center;
+  background-color: #1e2427;
+  overflow: hidden;
 }
 
 .homeHeaderMain {
   position: absolute;
   top: 9%;
   width: 100%;
+}
+
+.profilePage {
+  background-image: url(./images/swbgdark.png);
+  height: 100vh;
+  width: 100vw;
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  margin-top: 0;
+  padding-top: 4%;
 }
