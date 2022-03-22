@@ -2,21 +2,23 @@ import './App.css';
 import React from 'react';
 import Home from './components/Home';
 import Profile from './components/Profile';
+import StarwarsDataService from './services/StarwarsDataService';
 
 function App() {
   const [loading, setLoading] = React.useState(true);
   const [people, setPeople] = React.useState(null);
   // function to call star wars api once on app init
-  const getStarWarsCharacters = async () => {
-    if(people == null){
-      let results = await fetch('https://swapi.dev/api/people');
-      let data =  await results.json();
-      setPeople(data.results);
-      console.log(data.results);
-      setLoading(false);
+  const starwarsApiService = async () => {
+    if (people == null) {
+      let results = await StarwarsDataService();
+      let data = await results;
+      await setPeople(data);
+      await setLoading(false);
+    } else {
+      console.log('people are not null');
     }
   }
-  getStarWarsCharacters();
+  starwarsApiService();
 
   return (
     

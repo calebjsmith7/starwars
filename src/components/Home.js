@@ -12,9 +12,10 @@ function Home(props) {
           <Search search={searchValue} setSearch={setSearchValue} />
           <div style={{ display: searchValue ? 'block' : 'none', backgroundColor: 'white', width: '50%', marginLeft: 'auto', marginRight: 'auto', marginTop: '-2%' }}>
               {characters.map((char) => {
-                  
+                  let charName = char.name.toUpperCase();
                   return (
-                    char.name.match(searchValue) ?
+                    
+                    charName.match(searchValue.toUpperCase()) ?
                       <a href={"/profile/" + char.name} style={{textDecoration: 'none'}}>
                       <div onClick={()=>console.log(char.name + ' clicked')} style={{height: 40, backgroundColor: 'white', textAlign: 'center'}}>
                               <h5 style={{color: 'black'}}>{char.name}</h5>
