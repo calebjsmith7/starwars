@@ -7,6 +7,7 @@ import GetPoundsFromKilos from '../util/GetPoundsFromKilos';
 import GetFeetFromCm from '../util/GetFeetFromCm';
 import CapitalizeFirstLetter from '../util/CapitalizeFirstLetter';
 import StarwarsDataService from '../services/StarwarsDataService';
+import Languages from './Languages';
 
 function Profile(props) {
     const [searchValue, setSearchValue] = React.useState("");
@@ -15,6 +16,7 @@ function Profile(props) {
     const [filmData, setFilmData] = React.useState([]);
     const [species, setSpecies] = React.useState(null);
     const [starships, setStarships] = React.useState([]);
+    const [language, setLanguage] = React.useState('English');
 
     // One time function per profile to call Starwars api for specific character
     React.useEffect(()=>{
@@ -39,8 +41,6 @@ function Profile(props) {
                   average_lifespan: '72.6 Years'});
       }
         
-       
-
       // retreive starships flown
         for(let i = 0; i < props.character.starships.length; i++){
           let results = await StarwarsDataService(props.character.starships[i]);
@@ -52,13 +52,13 @@ function Profile(props) {
       getCharacterInformation();
     },[]);
 
-console.log(props.character);
  
   return (
     <div className='profilePage'> 
         <Header width={150}/>
         <Search search={searchValue} setSearch={setSearchValue} width="30%"/>
         <SearchResults characterList={characters} searchEntry={searchValue} width="30%" />
+        <Languages lang={language} setLang={setLanguage}/>
         
         <div style={{width: '26%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: '#1e2427', padding: '2%', paddingTop: 0}}>
         <h2 style={{color: 'white', fontSize: 40, marginTop: 50}}>{props.character.name}</h2>
