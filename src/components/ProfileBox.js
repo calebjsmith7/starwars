@@ -9,7 +9,7 @@ function ProfileBox(props) {
 
     return (
         <>
-            <div style={{ width: '26%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: '#1e2427', padding: '2%', paddingTop: 0 }}>
+            <div className='profileBox' style={{ width: window.innerWidth > 400 ? "26%" : '81%', marginLeft: 'auto', marginRight: 'auto', backgroundColor: '#1e2427', padding: '2%', paddingTop: 0 }}>
                 <h2 style={{ color: 'white', fontSize: 40, marginTop: 50, marginBottom: 10 }}>{props.charName}</h2>
                 <h4 style={{ color: 'white', fontFamily: 'Aurek-Besh', fontSize: 14, marginTop: 15  }}>{props.charName}</h4>
                 <h4 style={{ color: 'white', fontSize: 20, textDecorationLine: 'underline', marginTop: 50, marginBottom: 10 }}>About Me</h4>

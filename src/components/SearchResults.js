@@ -7,7 +7,7 @@ function SearchResults(props) {
 
     return (
         <>
-            <div style={{ display: props.searchEntry ? 'block' : 'none', backgroundColor: 'white', width: props.width, marginLeft: 'auto', marginRight: 'auto', marginTop: '-1%', height: 'auto', maxHeight: 300, overflowY: 'scroll' }}>
+            <div className='searchResults' style={{ display: props.searchEntry ? 'block' : 'none', backgroundColor: 'white', width: props.width, marginLeft: 'auto', marginRight: 'auto', marginTop: '-1%', height: 'auto', maxHeight: 300, overflowY: 'scroll' }}>
                 {props.characterList.map((char) => {
                     let charName = char.name.toUpperCase();
                     let nameObject = FirstAndLastNames(charName);

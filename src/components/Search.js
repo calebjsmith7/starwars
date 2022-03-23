@@ -11,6 +11,7 @@ function Search(props) {
         onRequestSearch={()=>console.log('searching' + props.search)}
         onCancelSearch={()=>{props.setSearch("")}}
         style={{width: props.width, marginLeft: 'auto', marginRight: 'auto', marginTop: '1%'}}
+        className="searchBar"
     />
     </>
   );

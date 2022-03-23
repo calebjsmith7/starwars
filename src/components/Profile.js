@@ -47,12 +47,12 @@ function Profile(props) {
     getCharacterInformation();
   }, []);
 
-  console.log(props.character);
+  
   return (
     <div className='profilePage'>
       <Header width={150} />
-      <Search search={searchValue} setSearch={setSearchValue} width="30%" />
-      <SearchResults characterList={characters} searchEntry={searchValue} width="30%" />
+      <Search search={searchValue} setSearch={setSearchValue} width={window.innerWidth > 400 ? "30%" : '85%'}/>
+      <SearchResults characterList={characters} searchEntry={searchValue} width={window.innerWidth > 400 ? "30%" : '85%'} />
       <ProfileBox charName={props.character.name} charHeight={props.character.height} charMass={props.character.mass} charHairColor={props.character.hair_color} charBirthday={props.character.birth_year} specInfo={species} retData={retreivedData} char={props.character} films={filmData} theStarShips={starships}/>
     </div>
   );
