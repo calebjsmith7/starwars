@@ -1,4 +1,4 @@
-import CapitalizeFirstLetter from "../util/CapitalizeFirstLetter";
+import CapitalizeFirstLetter from "./CapitalizeFirstLetter";
 
 test('returns Capital from capital', () => {
     expect(CapitalizeFirstLetter('capital')).toBe('Capital');

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import FirstAndLastNames from '../util/FirstAndLastNames';
+import FirstAndLastNames from '../../util/FirstAndLastNames';
 import { v4 as uuidv4 } from 'uuid';
 
 function SearchResults(props) {

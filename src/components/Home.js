@@ -1,7 +1,7 @@
 import React from 'react';
-import Search from '../components/Search';
-import Header from '../components/Header';
-import SearchResults from './SearchResults';
+import Search from './common/Search';
+import Header from './common/Header';
+import SearchResults from './common/SearchResults';
 
 function Home(props) {
     const [searchValue, setSearchValue] = React.useState("");

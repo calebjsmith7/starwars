@@ -1,6 +1,9 @@
 .App {
   text-align: center;
   background-color: #1e2427;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
   
 }
 
@@ -11,7 +14,7 @@
 }
 
 .profilePage {
-  background-image: url(./images/swbgdark.png);
+  background-image: url(./assets/images/swbgdark.png);
   height: 'auto';
   min-height: 100vh;
   width: 100vw;
@@ -21,5 +24,19 @@
   margin-top: 0;
   padding-top: 4%;
   padding-bottom: 4%;
+}
+
+.profileText {
+  color: white;
+}
+.italicText {
+  color: white;
+  font-style: italic;
+}
+.profileSection {
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
 

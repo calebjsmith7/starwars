@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './Header';
-import Search from './Search';
-import SearchResults from './SearchResults';
-import StarwarsDataService from '../services/StarwarsDataService';
+import Header from '../common/Header';
+import Search from '../common/Search';
+import SearchResults from '../common/SearchResults';
+import StarwarsDataService from '../../services/StarwarsDataService';
 import ProfileBox from './ProfileBox';
 
 function Profile(props) {
@@ -47,12 +47,13 @@ function Profile(props) {
     getCharacterInformation();
   }, []);
 
+  console.log(window.innerWidth);
   
   return (
     <div className='profilePage'>
       <Header width={150} />
-      <Search search={searchValue} setSearch={setSearchValue} width={window.innerWidth > 400 ? "30%" : '85%'}/>
-      <SearchResults characterList={characters} searchEntry={searchValue} width={window.innerWidth > 400 ? "30%" : '85%'} />
+      <Search search={searchValue} setSearch={setSearchValue} width={window.innerWidth > 500 ? "40%" : '85%'}/>
+      <SearchResults characterList={characters} searchEntry={searchValue} width={window.innerWidth > 500 ? "40%" : '85%'} />
       <ProfileBox charName={props.character.name} charHeight={props.character.height} charMass={props.character.mass} charHairColor={props.character.hair_color} charBirthday={props.character.birth_year} specInfo={species} retData={retreivedData} char={props.character} films={filmData} theStarShips={starships}/>
     </div>
   );

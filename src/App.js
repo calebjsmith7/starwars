@@ -2,8 +2,8 @@ import './App.css';
 import React from 'react';
 import { Routes, Route} from "react-router-dom";
 import Home from './components/Home';
-import Profile from './components/Profile';
-import Loading from './components/Loading';
+import Profile from './components/profile/Profile';
+import Loading from './components/common/Loading';
 import StarwarsDataService from './services/StarwarsDataService';
 import FirstAndLastNames from './util/FirstAndLastNames';
 import { v4 as uuidv4 } from 'uuid';
@@ -26,7 +26,7 @@ function App() {
 
   return (
 
-    <div className="App" style={{ backgroundColor: '#1e2427', height: '100vh', width: '100vw', position: 'relative' }}>
+    <div className="App">
       {loading ?
         <Loading/>
         :
