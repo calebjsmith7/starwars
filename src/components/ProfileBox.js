@@ -19,7 +19,7 @@ function ProfileBox(props) {
                 <p style={{ color: 'white' }}>Hair Color: {CapitalizeFirstLetter(props.charHairColor)}</p>
                 <p style={{ color: 'white' }}>Birthyear: {props.charBirthday}</p>
                 <p style={{ color: 'white' }}>Species Info: {props.specInfo ? props.specInfo.name : "Loading..."}</p>
-                <p style={{ color: 'white' }}>Species Average Lifespan: {props.specInfo ? CapitalizeFirstLetter(props.specInfo.average_lifespan) : "Loading..."}</p>
+                <p style={{ color: 'white' }}>Species Average Lifespan: {props.specInfo ? props.specInfo.average_lifespan : "Loading..."}</p>
                 <p style={{ color: 'white' }}>Films: </p>
                 <div style={{ textAlign: 'left', width: '40%', marginLeft: 'auto', marginRight: 'auto' }}>
                     {props.retData === props.char.films.length ?
