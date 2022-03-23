@@ -1,5 +1,4 @@
-function FirstAndLastNames(name) {
-
+export default function FirstAndLastNames(name) {
     let ans = {
         first: null,
         last: null
@@ -10,8 +9,5 @@ function FirstAndLastNames(name) {
 
     ans.first = first;
     ans.last = last;
-    
     return ans;
 }
-
-export default FirstAndLastNames;

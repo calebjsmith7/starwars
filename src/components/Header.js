@@ -6,7 +6,7 @@ function Header(props) {
   return (
     <>
       <Link to="/">
-        <img src={Logo} style={{ width: props.width, height: 'auto' }} />
+        <img src={Logo} style={{ width: props.width, height: 'auto' }} alt="Star Wars Logo" />
       </Link>
     </>
   );
