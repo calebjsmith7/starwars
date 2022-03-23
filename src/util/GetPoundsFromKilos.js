@@ -1,4 +1,6 @@
 export default function GetPoundsFromKilos(kilos) {
-    let ans = kilos * 2.205;
-    return ans;
+    if(kilos && typeof kilos == "number"){
+        let ans = kilos * 2.205;
+        return ans;
+    } else return "Error"; 
 }
